@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+import path from 'path';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -30,6 +31,13 @@ const nextConfig: NextConfig = {
       '@arianeguay/design-system': '../design-system/src/index.ts',
       '@arianeguay/design-system/styles': '../design-system/src/styles/index.css',
     },
+  },
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@arianeguay/design-system': path.resolve(__dirname, '../design-system/src/index.ts'),
+    };
+    return config;
   },
   images: {
     formats: ['image/avif', 'image/webp'],
