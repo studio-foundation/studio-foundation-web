@@ -26,19 +26,6 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@arianeguay/design-system'],
-  turbopack: {
-    resolveAlias: {
-      '@arianeguay/design-system': '../design-system/src/index.ts',
-      '@arianeguay/design-system/styles': '../design-system/src/styles/index.css',
-    },
-  },
-  webpack(config) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@arianeguay/design-system': path.resolve(__dirname, '../design-system/src/index.ts'),
-    };
-    return config;
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
   },
