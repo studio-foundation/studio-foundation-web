@@ -76,7 +76,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       data-theme="dark"
       className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${ubuntu.variable}`}
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
