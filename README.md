@@ -7,26 +7,10 @@ The public website for [studio-foundation.org](https://studio-foundation.org).
 - **Next.js 16** — App Router, React Server Components, TypeScript
 - **next-intl** — EN (default, `/`) and FR (`/fr/`)
 - **@arianeguay/design-system** — shared design system (tokens, components)
-- **pnpm** — package manager (monorepo workspace)
+- **pnpm** — package manager
 - **Vercel** — deployment target
 
 ## Working locally
-
-### From the monorepo workspace (recommended)
-
-Clone the workspace and all repos are available together:
-
-```bash
-git clone https://github.com/arianeguay/workspace.git
-cd workspace
-pnpm install
-cd studio-foundation
-pnpm dev   # http://localhost:3000
-```
-
-Working from the workspace lets you modify `@arianeguay/design-system` and see changes instantly — no need to publish a new package version. Turbopack is configured to read the design-system source directly via `resolveAlias`.
-
-### Standalone
 
 ```bash
 git clone https://github.com/studio-foundation/studio-foundation-web.git
@@ -35,12 +19,14 @@ pnpm install
 pnpm dev   # http://localhost:3000
 ```
 
-In standalone mode the design-system resolves from the published package on GitHub Packages. You need a `GITHUB_TOKEN` with `read:packages` scope in your environment:
+`@arianeguay/design-system` resolves from the published package on GitHub Packages. You need a `GITHUB_TOKEN` with `read:packages` scope:
 
 ```bash
 export GITHUB_TOKEN=ghp_...
 pnpm install
 ```
+
+> **Local workspace setup** — If you have both repos checked out as siblings (e.g. inside a shared parent workspace), you can optionally add `resolveAlias` in `next.config.ts` to point Turbopack at the design-system source directly and see changes without republishing. This is a local dev convenience, not a requirement.
 
 ## Commands
 

@@ -26,6 +26,14 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@arianeguay/design-system'],
+  webpack(config) {
+    // Webpack (production build) ignores the "source" export condition that Turbopack uses.
+    // Without this alias, CSS modules in the design-system dist resolve to empty objects.
+    config.resolve.alias['@arianeguay/design-system'] = path.resolve(
+      './node_modules/@arianeguay/design-system/src/index.ts'
+    );
+    return config;
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
   },

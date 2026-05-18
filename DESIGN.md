@@ -1,6 +1,6 @@
 # Design — studio-foundation-web
 
-Ce repo utilise le design system partagé `@arianeguay/design-system` sans déviation visuelle à ce stade (STU-327). Les tokens, composants, et règles de base sont documentés dans [`design-system/DESIGN.md`](../design-system/DESIGN.md).
+Ce repo utilise le design system partagé `@arianeguay/design-system` sans déviation visuelle à ce stade (STU-327). Les tokens, composants, et règles de base sont documentés dans le repo [`@arianeguay/design-system`](https://github.com/arianeguay/design-system).
 
 Ce fichier documente les **spécificités de Studio Foundation Web** — ce qui diffère ou s'ajoute par rapport au DS de base.
 

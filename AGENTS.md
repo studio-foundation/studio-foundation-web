@@ -12,9 +12,9 @@ Next.js 16.2.6 · React 19 · TypeScript 5 (strict) · next-intl 4.12 · @ariane
 |---|---|
 | Framework | Next.js 16 App Router |
 | i18n | next-intl 4 — locales `en` (default) + `fr` |
-| Design system | `@arianeguay/design-system` (workspace `../design-system`) |
+| Design system | `@arianeguay/design-system` (publié sur GitHub Packages) |
 | Styling | CSS custom properties via DS + CSS Modules locaux si besoin |
-| Package manager | pnpm (workspace monorepo) |
+| Package manager | pnpm |
 | Runtime | Node.js, déployé sur Vercel |
 
 ---
@@ -46,8 +46,14 @@ import '@arianeguay/design-system/styles';
 import { Button, Tag, WarmSection, PageHero, SectionHeader, RichText, YamlPreview, YamlPreviewDark, Y, FadeIn } from '@arianeguay/design-system';
 ```
 
-### Résolution en workspace (next.config.ts)
-`transpilePackages + resolveAlias` redirige Turbopack vers le source TypeScript du DS pour que les CSS modules soient gérés nativement. Ne pas supprimer ces deux options.
+### Résolution des CSS modules (next.config.ts)
+
+Deux configurations coexistent — **les deux sont nécessaires** :
+
+- `transpilePackages` — demande à Turbopack (dev) de recompiler le source du package. Turbopack lit le champ `"source"` dans les exports du package et pointe vers `src/index.ts` → CSS modules réels.
+- `webpack()` alias — en production (`pnpm build`), webpack ignore le champ `"source"` et tombe sur `dist/index.js` où les CSS modules sont des objets vides. L'alias redirige webpack vers `node_modules/@arianeguay/design-system/src/index.ts`.
+
+Ne pas supprimer ni `transpilePackages` ni le bloc `webpack()`.
 
 ### Composants locaux (`src/components/system/`)
 Seuls les composants **spécifiques à Studio Foundation Web** vivent ici :
@@ -85,4 +91,4 @@ Fichiers : `messages/en.json` et `messages/fr.json`.
 - Hardcoder des couleurs hex — tout passe par les tokens du DS
 - Utiliser `dangerouslySetInnerHTML` hors de `<RichText>`
 - Hardcoder des chemins de navigation — utiliser `src/lib/nav.ts`
-- Supprimer `transpilePackages` ou `resolveAlias` de `next.config.ts` — les CSS modules du DS ne fonctionneraient plus
+- Supprimer `transpilePackages` ou le bloc `webpack()` de `next.config.ts` — les CSS modules du DS ne fonctionneraient plus (en dev ou en prod)
