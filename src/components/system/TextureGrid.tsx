@@ -5,7 +5,7 @@ interface TextureGridProps {
 }
 
 const VARIANTS = {
-  base: { r: 0.8, opacity: 0.2 },
+  base: { r: 0.8, opacity: 0.18 },
   strong: { r: 1.3, opacity: 0.25 },
 };
 
