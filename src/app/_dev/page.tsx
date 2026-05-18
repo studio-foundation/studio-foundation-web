@@ -2,14 +2,7 @@
  * Component sandbox — delete before merging to main.
  * Visit /_dev to test all ported system components.
  */
-import Button from '@/components/system/Button';
-import Tag from '@/components/system/Tag';
-import WarmSection from '@/components/system/WarmSection';
-import PageHero from '@/components/system/PageHero';
-import SectionHeader from '@/components/system/SectionHeader';
-import { YamlPreviewDark, Y } from '@/components/system/YamlPreview';
-import FadeIn from '@/components/system/FadeIn';
-import RichText from '@/components/system/RichText';
+import { Button, Tag, WarmSection, PageHero, SectionHeader, YamlPreviewDark, Y, RichText, FadeIn } from '@arianeguay/design-system';
 
 export default function DevSandbox() {
   return (

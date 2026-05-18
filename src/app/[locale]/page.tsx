@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import PageHero from '@/components/system/PageHero';
-import Button from '@/components/system/Button';
+import { PageHero, Button } from '@arianeguay/design-system';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Fraunces, Inter, JetBrains_Mono, Ubuntu } from 'next/font/google';
 import { getLocale } from 'next-intl/server';
-import '@/styles/globals.css';
+import '@arianeguay/design-system/styles';
 
 const inter = Inter({
   subsets: ['latin'],
