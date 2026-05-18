@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
       '@arianeguay/design-system': '../design-system/src/index.ts',
+      '@arianeguay/design-system/styles': '../design-system/src/styles/index.css',
     },
   },
   images: {

@@ -1,0 +1,47 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 80px;
+}
+
+.left {
+  /* vertical stack handled by children margins */
+}
+
+.right {
+  /* vertical stack */
+}
+
+.mechanisms {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mechanism {
+  padding-left: 16px;
+  border-left: 2px solid var(--color-terra-soft);
+}
+
+.mechTitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0 0 6px;
+}
+
+.quote {
+  margin: 0;
+  padding: 48px 0;
+  border-top: 1px solid var(--color-ink-rule);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

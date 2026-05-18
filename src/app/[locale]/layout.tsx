@@ -3,6 +3,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Header from '@/components/system/Header';
+import Footer from '@/components/system/Footer';
 
 const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
 
@@ -43,7 +45,13 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <NextIntlClientProvider messages={messages}>
-      {children}
+      <div data-theme="dark" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Header />
+        <main style={{ flex: 1 }}>
+          {children}
+        </main>
+        <Footer />
+      </div>
     </NextIntlClientProvider>
   );
 }

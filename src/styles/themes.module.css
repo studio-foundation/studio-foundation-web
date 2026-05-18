@@ -1,0 +1,26 @@
+/* Reset all dark-theme token overrides for sections that must render on light background.
+   Necessary because the outer layout wrapper has data-theme="dark" which remaps
+   --color-cream to #1c1510. This class explicitly restores the light values so that
+   WarmSection bg="cream" / bg="paper" render visibly light. */
+.light {
+  --color-cream:       #f5efe4;
+  --color-cream-deep:  #ede3d2;
+  --color-paper:       #faf6ed;
+  --color-paper-warm:  #f1e8d8;
+
+  --color-ink:         #2a2018;
+  --color-ink-soft:    #4a3d31;
+  --color-ink-mute:    rgba(42, 32, 24, 0.6);
+  --color-ink-faint:   rgba(42, 32, 24, 0.4);
+  --color-ink-rule:    rgba(42, 32, 24, 0.13);
+  --color-ink-line:    rgba(42, 32, 24, 0.22);
+
+  --color-terra:       #c96442;
+  --color-terra-deep:  #9b4528;
+  --color-terra-soft:  rgba(201, 100, 66, 0.12);
+
+  --color-mustard:     #dba636;
+  --color-bourgogne:   #7a1f3d;
+
+  color-scheme: light;
+}

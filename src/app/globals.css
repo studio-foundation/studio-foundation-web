@@ -1,0 +1,16 @@
+/* Base font reset — DS only ships utility classes, not a body rule.
+   Without this, elements without a DS typography class fall back to
+   the browser default (typically Times New Roman). */
+body,
+p,
+a,
+li,
+span,
+td,
+th,
+label,
+input,
+button,
+blockquote {
+  font-family: var(--font-body);
+}

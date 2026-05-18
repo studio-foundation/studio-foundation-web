@@ -1,0 +1,27 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.pattern {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.left {
+  padding-top: 8px;
+}
+
+.right {
+  /* nothing — YamlPreviewDark handles its own sizing */
+}
+
+@media (max-width: 860px) {
+  .pattern {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
