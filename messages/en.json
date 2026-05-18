@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "mission": "Mission",
+    "charter": "Charter",
+    "install": "Install",
+    "contribute": "Contribute",
+    "github": "GitHub ↗",
+    "lang": "EN / FR"
+  },
+  "home": {
+    "eyebrow": "Studio Foundation",
+    "title": "Build agentic pipelines with confidence.",
+    "lead": "Studio is a domain-agnostic pipeline orchestrator for LLM workflows — strict output validation, automatic retry, no vendor lock-in.",
+    "cta_install": "Get started →",
+    "cta_docs": "Read the docs →"
+  },
+  "meta": {
+    "title": "Studio Foundation — Agentic pipeline orchestrator",
+    "description": "Studio is a domain-agnostic agentic pipeline orchestrator. Execute multi-stage LLM workflows with strict output validation and automatic retry."
+  }
+}

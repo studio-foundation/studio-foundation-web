@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "mission": "Mission",
+    "charter": "Charte",
+    "install": "Installer",
+    "contribute": "Contribuer",
+    "github": "GitHub ↗",
+    "lang": "EN / FR"
+  },
+  "home": {
+    "eyebrow": "Studio Foundation",
+    "title": "Orchestrez vos pipelines agentiques en toute confiance.",
+    "lead": "Studio est un orchestrateur de pipelines LLM indépendant du domaine — validation stricte des sorties, retry automatique, sans dépendance fournisseur.",
+    "cta_install": "Commencer →",
+    "cta_docs": "Lire la documentation →"
+  },
+  "meta": {
+    "title": "Studio Foundation — Orchestrateur de pipelines agentiques",
+    "description": "Studio est un orchestrateur de pipelines agentiques indépendant du domaine. Exécutez des workflows LLM multi-étapes avec validation stricte et retry automatique."
+  }
+}
