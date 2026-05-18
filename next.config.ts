@@ -1,6 +1,5 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
-import path from 'path';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -27,11 +26,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   transpilePackages: ['@arianeguay/design-system'],
   webpack(config) {
-    // Webpack (production build) ignores the "source" export condition that Turbopack uses.
-    // Without this alias, CSS modules in the design-system dist resolve to empty objects.
-    config.resolve.alias['@arianeguay/design-system'] = path.resolve(
-      './node_modules/@arianeguay/design-system/src/index.ts'
-    );
+    // Webpack ignores the "source" export condition that Turbopack uses.
+    // Without this, CSS modules in the dist resolve to empty objects.
+    // conditionNames adds "source" so webpack picks up src/index.ts directly.
+    config.resolve.conditionNames = ['source', 'import', 'require', 'default'];
     return config;
   },
   images: {
