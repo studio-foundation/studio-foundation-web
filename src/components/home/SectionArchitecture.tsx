@@ -17,43 +17,40 @@ export default function SectionArchitecture() {
   ];
 
   return (
-    <WarmSection bg="dark" style={{ position: 'relative', overflow: 'hidden' }}>
-      <TextureGrid variant="base" />
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <SectionHeader
-          tag={t('tag')}
-          title={
-            <>
-              {t('title')}{' '}
-              <span className="t-accent">{t('title_accent')}</span>
-            </>
-          }
-          lead={t('lead')}
-          size="lg"
-        />
-        <div className={styles.layout}>
-          <div className={styles.grid}>
-            {packages.map((pkg, i) => (
-              <FadeIn key={i} delay={i * 60}>
-                <div className={styles.card}>
-                  <p className="t-mono-label" style={{ color: 'var(--color-terra)', marginBottom: 8 }}>{pkg.name}</p>
-                  <p className="t-body" style={{ color: 'var(--color-dark-fg)', margin: 0 }}>{pkg.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn delay={200}>
-            <aside className={styles.aside}>
-              <div className={styles.asideBlock}>
-                <p className="t-eyebrow" style={{ marginBottom: 8 }}>{t('aside_ralph_title')}</p>
-                <p className="t-body" style={{ color: 'var(--color-dark-fg-dim)' }}>{t('aside_ralph_body')}</p>
+    <WarmSection bg="dark" renderTexture={<TextureGrid variant="base" />}>
+      <SectionHeader
+        tag={t('tag')}
+        title={
+          <>
+            {t('title')}{' '}
+            <span className="t-accent">{t('title_accent')}</span>
+          </>
+        }
+        lead={t('lead')}
+        size="lg"
+      />
+      <div className={styles.layout}>
+        <div className={styles.grid}>
+          {packages.map((pkg, i) => (
+            <FadeIn key={i} delay={i * 60}>
+              <div className={styles.card}>
+                <p className="t-mono-label" style={{ color: 'var(--color-terra)', marginBottom: 8 }}>{pkg.name}</p>
+                <p className="t-body" style={{ color: 'var(--color-dark-fg)', margin: 0 }}>{pkg.desc}</p>
               </div>
-              <div className={styles.asideBlock}>
-                <p className="t-body" style={{ color: 'var(--color-dark-fg)', fontStyle: 'italic' }}>{t('aside_kernel_body')}</p>
-              </div>
-            </aside>
-          </FadeIn>
+            </FadeIn>
+          ))}
         </div>
+        <FadeIn delay={200}>
+          <aside className={styles.aside}>
+            <div className={styles.asideBlock}>
+              <p className="t-eyebrow" style={{ marginBottom: 8 }}>{t('aside_ralph_title')}</p>
+              <p className="t-body" style={{ color: 'var(--color-dark-fg-dim)' }}>{t('aside_ralph_body')}</p>
+            </div>
+            <div className={styles.asideBlock}>
+              <p className="t-body" style={{ color: 'var(--color-dark-fg)', fontStyle: 'italic' }}>{t('aside_kernel_body')}</p>
+            </div>
+          </aside>
+        </FadeIn>
       </div>
     </WarmSection>
   );

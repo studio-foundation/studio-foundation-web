@@ -27,23 +27,19 @@ export default function HomePage() {
 
   return (
     <>
-      <div style={{ position: 'relative', overflow: 'hidden' }}>
-        <TextureGrid variant="strong" />
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <PageHero
-            eyebrow={t('eyebrow')}
-            title={t('title')}
-            lead={t('lead')}
-            ctas={
-              <>
-                <Button href="#thesis" variant="terra">{t('cta_read')}</Button>
-                <Button href={GITHUB_URL} variant="ghost" external>{t('cta_github')}</Button>
-              </>
-            }
-            right={<HeroYamlPreview />}
-          />
-        </div>
-      </div>
+      <PageHero
+        eyebrow={t('eyebrow')}
+        title={t('title')}
+        lead={t('lead')}
+        renderTexture={<TextureGrid variant="strong" />}
+        ctas={
+          <>
+            <Button href="#thesis" variant="terra">{t('cta_read')}</Button>
+            <Button href={GITHUB_URL} variant="ghost" external>{t('cta_github')}</Button>
+          </>
+        }
+        right={<HeroYamlPreview />}
+      />
       <div id="thesis">
         <SectionThesis />
       </div>

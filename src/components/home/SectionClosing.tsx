@@ -8,8 +8,7 @@ export default function SectionClosing() {
   const t = useTranslations('home.closing');
 
   return (
-    <WarmSection bg="dark" style={{ position: 'relative', overflow: 'hidden' }}>
-      <TextureGrid variant="strong" />
+    <WarmSection bg="dark" renderTexture={<TextureGrid variant="strong" />}>
       <FadeIn>
         <div className={styles.inner}>
           <h2 className="t-h2" style={{ color: 'var(--color-dark-fg)', marginBottom: 40 }}>
