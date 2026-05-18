@@ -15,7 +15,9 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@arianeguay/design-system": ["../design-system/src/index.ts"],
+      "@arianeguay/design-system/styles": ["../design-system/src/styles/index.css"]
     }
   },
   "include": [
