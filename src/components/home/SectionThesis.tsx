@@ -8,7 +8,7 @@ export default function SectionThesis() {
 
   return (
     <div className={themes.light}>
-    <WarmSection bg="cream">
+    <WarmSection bg="cream" py={62}>
       <SectionHeader
         tag={t('tag')}
         title={t('title')}

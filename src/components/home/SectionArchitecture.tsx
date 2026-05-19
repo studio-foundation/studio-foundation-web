@@ -17,7 +17,7 @@ export default function SectionArchitecture() {
   ];
 
   return (
-    <WarmSection bg="dark" renderTexture={<TextureGrid variant="base" />}>
+    <WarmSection bg="dark" py={62} renderTexture={<TextureGrid variant="base" />}>
       <SectionHeader
         tag={t('tag')}
         title={

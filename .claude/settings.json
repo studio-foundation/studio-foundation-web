@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/arianeguay/dev/src/workspace/design-system/src -name \"PageHero*\" -o -name \"WarmSection*\" 2>/dev/null | head -20)",
+      "Read(//home/arianeguay/dev/src/workspace/design-system/src/**)",
+      "Bash(pnpm build *)"
+    ]
+  }
+}

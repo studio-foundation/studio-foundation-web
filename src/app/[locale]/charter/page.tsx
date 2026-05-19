@@ -86,6 +86,7 @@ export default function CharterPage() {
         title={t('hero_title')}
         lead={t('hero_lead')}
         renderTexture={<TextureGrid variant="base" />}
+        py={[64, 63]}
       />
 
       <div className={themes.light}>

@@ -34,6 +34,7 @@ export default function InstallPage() {
         title={t('title')}
         lead={t('lead')}
         renderTexture={<TextureGrid variant="base" />}
+        py={[60, 54]}
       />
 
       {/* Beta banner */}
@@ -48,9 +49,9 @@ export default function InstallPage() {
 
       {/* 2 — Four steps · cream */}
       <div className={themes.light}>
-        <WarmSection bg="cream">
+        <WarmSection bg="cream" py={62}>
           <FadeIn>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 48, maxWidth: 680 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 32, maxWidth: 680 }}>
               <InstallStep label={t('step1_label')} desc={t('step1_desc')} command="npm install -g @studio-foundation/cli@beta" />
               <InstallStep label={t('step2_label')} desc={t('step2_desc')} command="studio init --template software-full --name my-builder" />
               <InstallStep label={t('step3_label')} desc={t('step3_desc')} command="studio config set provider anthropic --api-key $ANTHROPIC_API_KEY" />
@@ -62,7 +63,7 @@ export default function InstallPage() {
 
       {/* 3 — Expected output · paperWarm, dark code block inside */}
       <div className={themes.light}>
-        <WarmSection bg="paperWarm">
+        <WarmSection bg="paperWarm" py={62}>
           <FadeIn>
             <div style={{ maxWidth: 680 }}>
               <InstallYamlPreview title={t('step4_yaml_title')} />
@@ -73,7 +74,7 @@ export default function InstallPage() {
 
       {/* 4 — Next steps · cream */}
       <div className={themes.light}>
-        <WarmSection bg="cream">
+        <WarmSection bg="cream" py={62}>
           <FadeIn>
             <p className="t-eyebrow" style={{ marginBottom: 32 }}>{t('next_tag')}</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2, maxWidth: 860 }}>
@@ -101,7 +102,7 @@ export default function InstallPage() {
       </div>
 
       {/* 5 — Closing · dark */}
-      <WarmSection bg="dark" renderTexture={<TextureGrid variant="base" />}>
+      <WarmSection bg="dark" py={62} renderTexture={<TextureGrid variant="base" />}>
         <FadeIn>
           <div style={{ maxWidth: 560 }}>
             <p className="t-eyebrow" style={{ marginBottom: 16, color: 'var(--color-dark-fg-dim)' }}>{t('more_title')}</p>

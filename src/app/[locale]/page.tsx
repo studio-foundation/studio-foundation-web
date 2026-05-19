@@ -32,6 +32,7 @@ export default function HomePage() {
         title={t('title')}
         lead={t('lead')}
         renderTexture={<TextureGrid variant="strong" />}
+        py={[60, 54]}
         ctas={
           <>
             <Button href="#thesis" variant="terra">{t('cta_read')}</Button>

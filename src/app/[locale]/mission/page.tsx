@@ -39,16 +39,17 @@ export default function MissionPage() {
         title={t('hero_title')}
         lead={t('hero_lead')}
         renderTexture={<TextureGrid variant="base" />}
+        py={[60, 54]}
       />
 
       <div className={themes.light}>
         {SECTIONS.map((section) => (
-          <WarmSection key={section.title} bg={section.bg} py={96}>
+          <WarmSection key={section.title} bg={section.bg} py={62}>
             <div style={{ maxWidth: 720 }}>
               <FadeIn>
                 <p className="t-eyebrow" style={{ marginBottom: 16 }}>{t(section.eyebrow)}</p>
-                <h2 className="t-h2" style={{ margin: '0 0 32px 0' }}>{t(section.title)}</h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <h2 className="t-h2" style={{ margin: '0 0 20px 0' }}>{t(section.title)}</h2>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {section.paragraphs.map((key, i) => (
                     <p
                       key={key}
@@ -61,7 +62,7 @@ export default function MissionPage() {
                 </div>
                 {'quote' in section && (
                   <blockquote style={{
-                    margin: '40px 0 0 0',
+                    margin: '24px 0 0 0',
                     paddingLeft: 24,
                     borderLeft: '3px solid var(--color-terra)',
                     fontFamily: 'var(--font-body)',
@@ -78,7 +79,7 @@ export default function MissionPage() {
           </WarmSection>
         ))}
 
-        <WarmSection bg="paperWarm" py={72}>
+        <WarmSection bg="paperWarm" py={48}>
           <FadeIn>
             <div style={{
               paddingTop: 0,

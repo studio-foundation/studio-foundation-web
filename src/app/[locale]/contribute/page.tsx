@@ -38,6 +38,7 @@ export default function ContributePage() {
         title={t('title')}
         lead={t('lead')}
         renderTexture={<TextureGrid variant="base" />}
+        py={[60, 54]}
         ctas={
           <Button href={GITHUB_URL} variant="terra" external>GitHub ↗</Button>
         }
@@ -45,11 +46,11 @@ export default function ContributePage() {
 
       {/* 2 — How to contribute · cream */}
       <div className={themes.light}>
-        <WarmSection bg="cream">
+        <WarmSection bg="cream" py={62}>
           <FadeIn>
-            <section style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+            <section style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
               <p className="t-eyebrow">{t('how_tag')}</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 40, maxWidth: 680 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 26, maxWidth: 680 }}>
                 <ContributeSection
                   title={t('how_issue_title')}
                   body={t('how_issue_body')}
@@ -75,11 +76,11 @@ export default function ContributePage() {
       </div>
 
       {/* 3 — What to know · dark */}
-      <WarmSection bg="dark" renderTexture={<TextureGrid variant="base" />}>
+      <WarmSection bg="dark" py={62} renderTexture={<TextureGrid variant="base" />}>
         <FadeIn>
-          <section style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+          <section style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             <p className="t-eyebrow" style={{ color: 'var(--color-dark-fg-dim)' }}>{t('know_tag')}</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, maxWidth: 680 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 26, maxWidth: 680 }}>
               <ContributeSection
                 title={t('know_invariants_title')}
                 body={t('know_invariants_body')}
@@ -103,9 +104,9 @@ export default function ContributePage() {
 
       {/* 4 — Development setup · cream, code blocks stay dark */}
       <div className={themes.light}>
-        <WarmSection bg="cream">
+        <WarmSection bg="cream" py={62}>
           <FadeIn>
-            <section style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+            <section style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
               <div>
                 <p className="t-eyebrow" style={{ marginBottom: 8 }}>{t('setup_tag')}</p>
                 <h2 className="t-h3" style={{ margin: 0 }}>{t('setup_title')}</h2>
@@ -124,14 +125,14 @@ export default function ContributePage() {
       </div>
 
       {/* 5 — Current priorities · dark */}
-      <WarmSection bg="dark" renderTexture={<TextureGrid variant="base" />}>
+      <WarmSection bg="dark" py={62} renderTexture={<TextureGrid variant="base" />}>
         <FadeIn>
-          <section style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+          <section style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             <div>
               <p className="t-eyebrow" style={{ marginBottom: 8, color: 'var(--color-dark-fg-dim)' }}>{t('priorities_tag')}</p>
               <h2 className="t-h3" style={{ margin: 0, color: 'var(--color-dark-fg)' }}>{t('priorities_title')}</h2>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 32, maxWidth: 680 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20, maxWidth: 680 }}>
               {([
                 { title: t('priority1_title'), status: t('priority1_status'), body: t('priority1_body'), link: null },
                 { title: t('priority2_title'), status: t('priority2_status'), body: t('priority2_body'), link: null },
@@ -164,7 +165,7 @@ export default function ContributePage() {
 
       {/* 6 — Closing · cream */}
       <div className={themes.light}>
-        <WarmSection bg="paperWarm">
+        <WarmSection bg="paperWarm" py={48}>
           <FadeIn>
             <div style={{ maxWidth: 680 }}>
               <p className="t-body" style={{ color: 'var(--color-ink-mute)', marginBottom: 16 }}>{t('closing_body')}</p>
