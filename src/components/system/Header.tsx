@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { NAV_HREFS, GITHUB_URL, type NavKey } from '@/lib/nav';
-import Wordmark from './Wordmark';
+import { StudioWordmark } from '@arianeguay/design-system';
 import LangSwitch from './LangSwitch';
 import s from './Header.module.css';
 
@@ -35,7 +35,7 @@ export default function Header() {
     <header className={s.header}>
       <div className={s.inner}>
         <Link href="/" className={s.wordmarkLink} aria-label="Studio Foundation — Home">
-          <Wordmark size={20} onDark />
+          <StudioWordmark size={20} onDark />
         </Link>
 
         <nav className={s.nav} aria-label="Primary navigation">
