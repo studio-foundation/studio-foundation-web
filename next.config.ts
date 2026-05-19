@@ -25,13 +25,6 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@arianeguay/design-system'],
-  webpack(config) {
-    // Webpack ignores the "source" export condition that Turbopack uses.
-    // Without this, CSS modules in the dist resolve to empty objects.
-    // conditionNames adds "source" so webpack picks up src/index.ts directly.
-    config.resolve.conditionNames = ['source', 'import', 'require', 'default'];
-    return config;
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
   },
