@@ -34,56 +34,47 @@ export default function InstallPage() {
         title={t('title')}
         lead={t('lead')}
         renderTexture={<TextureGrid variant="base" />}
-        py={[60, 54]}
+        py={[36, 28]}
+        titleProps={{ style: { fontSize: 'var(--fs-h2)', lineHeight: 1.05 } }}
+        ctas={
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: -12 }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', color: 'var(--color-terra)', fontWeight: 700 }}>BETA</span>
+            <span className="t-small" style={{ color: 'var(--color-dark-fg-dim)', opacity: 0.7 }}>{t('beta_banner')}</span>
+          </div>
+        }
       />
 
-      {/* Beta banner */}
+      {/* 2 — Four steps + expected output · cream */}
       <div className={themes.light}>
-        <div style={{ background: 'var(--color-paper-warm)', borderBottom: '1px solid var(--color-rule)' }}>
-          <div className="container" style={{ padding: '10px var(--page-px)', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', color: 'var(--color-terra)', fontWeight: 700 }}>BETA</span>
-            <span className="t-small" style={{ color: 'var(--color-ink-mute)' }}>{t('beta_banner')}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* 2 — Four steps · cream */}
-      <div className={themes.light}>
-        <WarmSection bg="cream" py={62}>
+        <WarmSection bg="cream" py={48}>
           <FadeIn>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 32, maxWidth: 680 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24, maxWidth: 680 }}>
               <InstallStep label={t('step1_label')} desc={t('step1_desc')} command="npm install -g @studio-foundation/cli@beta" />
               <InstallStep label={t('step2_label')} desc={t('step2_desc')} command="studio init --template software-full --name my-builder" />
               <InstallStep label={t('step3_label')} desc={t('step3_desc')} command="studio config set provider anthropic --api-key $ANTHROPIC_API_KEY" />
               <InstallStep label={t('step4_label')} desc={t('step4_desc')} command={STEP4_CMD} />
+              <div style={{ maxWidth: 680 }}>
+                <InstallYamlPreview title={t('step4_yaml_title')} />
+              </div>
             </div>
           </FadeIn>
         </WarmSection>
       </div>
 
-      {/* 3 — Expected output · paperWarm, dark code block inside */}
+      {/* 3 — Next steps · cream */}
       <div className={themes.light}>
-        <WarmSection bg="paperWarm" py={62}>
+        <WarmSection bg="paperWarm" py={48}>
           <FadeIn>
-            <div style={{ maxWidth: 680 }}>
-              <InstallYamlPreview title={t('step4_yaml_title')} />
-            </div>
-          </FadeIn>
-        </WarmSection>
-      </div>
-
-      {/* 4 — Next steps · cream */}
-      <div className={themes.light}>
-        <WarmSection bg="cream" py={62}>
-          <FadeIn>
-            <p className="t-eyebrow" style={{ marginBottom: 32 }}>{t('next_tag')}</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2, maxWidth: 860 }}>
+            <p className="t-eyebrow" style={{ marginBottom: 8 }}>{t('next_tag')}</p>
+            <h2 className="t-h2" style={{ margin: '0 0 12px' }}>{"What's next?"}</h2>
+            <p className="t-body" style={{ margin: '0 0 28px', color: 'var(--color-ink-mute)', maxWidth: 480 }}>{"You have a pipeline running. Three directions to take it further."}</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, maxWidth: 860 }}>
               {([
                 { title: t('next1_title'), body: t('next1_body'), link: t('next1_link'), href: `${GITHUB_URL}/blob/main/docs/pipelines.md` },
                 { title: t('next2_title'), body: t('next2_body'), link: t('next2_link'), href: `${GITHUB_URL}/blob/main/docs/tools.md` },
                 { title: t('next3_title'), body: t('next3_body'), link: t('next3_link'), href: `${GITHUB_URL}/blob/main/INVARIANTS.md` },
               ] as const).map(({ title, body, link, href }) => (
-                <div key={title} style={{ padding: '28px 24px', background: 'var(--color-paper-warm)', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div key={title} style={{ padding: '20px 18px', background: 'var(--color-cream)', border: '1px solid var(--color-ink-rule)', display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <h3 className="t-h4" style={{ margin: 0 }}>{title}</h3>
                   <p className="t-body" style={{ margin: 0, color: 'var(--color-ink-mute)', flexGrow: 1 }}>{body}</p>
                   <a
