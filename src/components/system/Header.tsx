@@ -1,9 +1,32 @@
+'use client';
+
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { NAV_HREFS, GITHUB_URL } from '@/lib/nav';
+import { usePathname } from 'next/navigation';
+import { NAV_HREFS, GITHUB_URL, type NavKey } from '@/lib/nav';
 import Wordmark from './Wordmark';
 import LangSwitch from './LangSwitch';
 import s from './Header.module.css';
+
+function useIsActive(href: string): boolean {
+  const pathname = usePathname();
+  // Strip locale prefix (/fr/...) before comparing
+  const normalized = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
+  return href === '/' ? normalized === '/' : normalized.startsWith(href);
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const active = useIsActive(href);
+  return (
+    <Link
+      href={href}
+      className={`${s.navLink} ${active ? s.navLinkActive : ''}`}
+      aria-current={active ? 'page' : undefined}
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -16,9 +39,9 @@ export default function Header() {
         </Link>
 
         <nav className={s.nav} aria-label="Primary navigation">
-          <Link href={NAV_HREFS.mission} className={s.navLink}>{t('mission')}</Link>
-          <Link href={NAV_HREFS.install} className={s.navLink}>{t('install')}</Link>
-          <Link href={NAV_HREFS.contribute} className={s.navLink}>{t('contribute')}</Link>
+          <NavLink href={NAV_HREFS.mission}>{t('mission')}</NavLink>
+          <NavLink href={NAV_HREFS.install}>{t('install')}</NavLink>
+          <NavLink href={NAV_HREFS.contribute}>{t('contribute')}</NavLink>
           <a
             href={GITHUB_URL}
             className={`${s.navLink} ${s.navLinkExternal}`}

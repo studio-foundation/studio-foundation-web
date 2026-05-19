@@ -42,6 +42,10 @@
   color: var(--color-dark-fg);
 }
 
+.navLinkActive {
+  color: var(--color-dark-fg);
+}
+
 .navLinkExternal {
   display: inline-flex;
   align-items: center;

@@ -27,7 +27,13 @@ export default function Footer() {
 
         <hr className={s.rule} />
 
-        <p className={s.credit}>Initiated by Ariane Guay · 2025</p>
+        <p className={s.credit}>
+          Initiated by{' '}
+          <a href="https://arianeguay.ca" className={s.creditLink} target="_blank" rel="noopener noreferrer">
+            Ariane Guay
+          </a>
+          {' '}· 2025
+        </p>
       </div>
     </footer>
   );

@@ -51,6 +51,16 @@
   color: var(--color-dark-fg);
 }
 
+.creditLink {
+  color: var(--color-dark-fg-dim);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.creditLink:hover {
+  color: var(--color-dark-fg);
+}
+
 .rule {
   border: none;
   border-top: 1px solid var(--color-dark-rule);
