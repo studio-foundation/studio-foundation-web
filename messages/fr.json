@@ -101,7 +101,7 @@
       "wiki_tags": ["NLP", "EPUB", "Python", "groupes parallèles"],
       "chef_title": "Little Chef",
       "chef_desc": "Planificateur de repas. Recherche des cuisines, développe des recettes avec profil nutritionnel, génère des listes de courses.",
-      "chef_url": "https://github.com/studio-foundation/little-chef-by-studio",
+      "chef_url": "https://little-chef.studio-foundation.org/",
       "chef_tags": ["Next.js", "Prisma", "nutrition", "multi-stage"]
     },
     "commons": {

@@ -101,7 +101,7 @@
       "wiki_tags": ["NLP", "EPUB", "Python", "parallel groups"],
       "chef_title": "Little Chef",
       "chef_desc": "Meal planner. Researches cuisines, develops recipes with nutritional profile, generates grocery lists.",
-      "chef_url": "https://github.com/studio-foundation/little-chef-by-studio",
+      "chef_url": "https://little-chef.studio-foundation.org/",
       "chef_tags": ["Next.js", "Prisma", "nutrition", "multi-stage"]
     },
     "commons": {

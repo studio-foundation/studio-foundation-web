@@ -44,7 +44,7 @@ export default function SectionProducts() {
               </div>
               <div className={styles.cardBottom}>
                 <Button href={p.url} variant="ghost" external>
-                  {p.url.replace('https://github.com/studio-foundation/', 'github.com/…/')} ↗
+                  {p.url.replace('https://github.com/studio-foundation/', 'github.com/…/').replace('https://', '')} ↗
                 </Button>
               </div>
             </div>
