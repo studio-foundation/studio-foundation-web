@@ -12,12 +12,14 @@ export default function SectionProducts() {
       desc: t('wiki_desc'),
       url: t('wiki_url'),
       tags: t.raw('wiki_tags') as string[],
+      cta: null,
     },
     {
       title: t('chef_title'),
       desc: t('chef_desc'),
       url: t('chef_url'),
       tags: t.raw('chef_tags') as string[],
+      cta: t('chef_cta'),
     },
   ];
 
@@ -44,7 +46,7 @@ export default function SectionProducts() {
               </div>
               <div className={styles.cardBottom}>
                 <Button href={p.url} variant="ghost" external>
-                  {p.url.replace('https://github.com/studio-foundation/', 'github.com/…/').replace('https://', '')} ↗
+                  {p.cta ?? p.url.replace('https://github.com/studio-foundation/', 'github.com/…/').replace('https://', '')} ↗
                 </Button>
               </div>
             </div>

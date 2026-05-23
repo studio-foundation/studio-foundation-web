@@ -102,6 +102,7 @@
       "chef_title": "Little Chef",
       "chef_desc": "Meal planner. Researches cuisines, develops recipes with nutritional profile, generates grocery lists.",
       "chef_url": "https://little-chef.studio-foundation.org/",
+      "chef_cta": "See demo",
       "chef_tags": ["Next.js", "Prisma", "nutrition", "multi-stage"]
     },
     "commons": {

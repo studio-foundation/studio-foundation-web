@@ -102,6 +102,7 @@
       "chef_title": "Little Chef",
       "chef_desc": "Planificateur de repas. Recherche des cuisines, développe des recettes avec profil nutritionnel, génère des listes de courses.",
       "chef_url": "https://little-chef.studio-foundation.org/",
+      "chef_cta": "Voir la démo",
       "chef_tags": ["Next.js", "Prisma", "nutrition", "multi-stage"]
     },
     "commons": {
