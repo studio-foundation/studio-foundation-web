@@ -38,7 +38,7 @@ export default function MissionPage() {
         eyebrow={t('eyebrow')}
         title={t('hero_title')}
         lead={t('hero_lead')}
-        renderTexture={<TextureGrid variant="base" />}
+        renderTexture={<><TextureGrid variant="base" /><div aria-hidden style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(ellipse at top right, rgba(201, 100, 66, 0.22), transparent 55%)', pointerEvents: 'none' }} /></>}
         py={[60, 54]}
       />
 

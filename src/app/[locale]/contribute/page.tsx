@@ -37,7 +37,7 @@ export default function ContributePage() {
         eyebrow={t('eyebrow')}
         title={t('title')}
         lead={t('lead')}
-        renderTexture={<TextureGrid variant="base" />}
+        renderTexture={<><TextureGrid variant="base" /><div aria-hidden style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(ellipse at top right, rgba(201, 100, 66, 0.22), transparent 55%)', pointerEvents: 'none' }} /></>}
         py={[60, 54]}
         ctas={
           <Button href={GITHUB_URL} variant="terra" external>GitHub ↗</Button>

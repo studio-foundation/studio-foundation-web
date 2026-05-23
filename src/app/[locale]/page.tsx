@@ -31,7 +31,7 @@ export default function HomePage() {
         eyebrow={t('eyebrow')}
         title={t('title')}
         lead={t('lead')}
-        renderTexture={<TextureGrid variant="strong" />}
+        renderTexture={<><TextureGrid variant="strong" /><div aria-hidden style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(ellipse at top right, rgba(201, 100, 66, 0.22), transparent 55%)', pointerEvents: 'none' }} /></>}
         py={[60, 54]}
         ctas={
           <>
