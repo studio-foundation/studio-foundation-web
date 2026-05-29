@@ -59,14 +59,6 @@ studio run analysis/content-extraction --input "..."`;
 
 const COMMUNITY_REGISTRY = `studio init --template @user/legal-analysis --name my-tool`;
 
-const TEMPLATES = [
-  { name: 'software/', useCases: 'Code generation, refactoring, git ops', examples: 'Code Builder, Git Butler' },
-  { name: 'finance/', useCases: 'Transaction analysis, budgeting', examples: 'ADHD Finance' },
-  { name: 'analysis/', useCases: 'Content extraction, entity recognition', examples: 'Wiki Creator, Voice Training' },
-  { name: 'data/', useCases: 'Validation, transformation, compliance', examples: 'ETL Auditors' },
-  { name: 'conversation/', useCases: 'Dialogue, memory, context', examples: 'Specialized assistants' },
-];
-
 function Rule() {
   return <hr className={styles.rule} />;
 }
@@ -235,16 +227,18 @@ export default function CharterPage() {
 
                   <table className={styles.table}>
                     <thead>
-                      <tr><th>Template</th><th>Use cases</th><th>Examples</th></tr>
+                      <tr><th>{t('col_template')}</th><th>{t('col_description')}</th></tr>
                     </thead>
                     <tbody>
-                      {TEMPLATES.map((row) => (
-                        <tr key={row.name}>
-                          <td>{row.name}</td>
-                          <td>{row.useCases}</td>
-                          <td>{row.examples}</td>
-                        </tr>
-                      ))}
+                      {Object.values(t.raw('s6_templates') as Record<string, string>).map((entry) => {
+                        const [name, ...rest] = entry.split(' — ');
+                        return (
+                          <tr key={name}>
+                            <td><code>{name}</code></td>
+                            <td>{rest.join(' — ')}</td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
 

@@ -310,7 +310,16 @@
     "s5_close": "Si une fonctionnalité peut être configurée en YAML plutôt que codée, elle l'est. Ce n'est pas une préférence stylistique, c'est une règle constitutionnelle du kernel.",
     "s6_title": "Templates",
     "s6_p1": "Les templates ne sont pas des produits finis. Ce sont des patterns architecturaux qui génèrent des applications complètes, comme create-react-app ou create-next-app, mais pour des applications orchestrées par IA.",
-    "s6_p2": "Cinq templates officiels sont prévus :",
+    "s6_p2": "Cinq templates officiels :",
+    "s6_templates": {
+      "t1": "software-full — Développement logiciel, pipeline complet avec revue QA",
+      "t2": "software — Génération de code avec outils repo, shell et recherche",
+      "t3": "content — Création et édition de contenu avec recherche",
+      "t4": "document-analysis — Extraction de documents et analyse structurée",
+      "t5": "parallel-tasks — Exécution parallèle de tâches en fan-out avec consolidation"
+    },
+    "col_template": "Template",
+    "col_description": "Description",
     "s6_p3": "Un template génère une application fonctionnelle out-of-the-box : pipelines de base pour le domaine, outils adaptés (.tool.yaml), contrats et agents configurés, schéma DB de départ (Prisma), code applicatif minimal mais fonctionnel.",
     "s6_p4": "Les templates sont conçus pour être réutilisables. Plusieurs produits peuvent démarrer depuis le même template et diverger complètement : Wiki Creator et Voice Training utilisent tous deux le template analysis/, mais l'un analyse des livres et l'autre traite de la voix. C'est le pattern architectural qui est partagé, pas le domaine.",
     "s6_registry": "Éventuellement, un registry communautaire permettra de publier et installer des templates personnalisés. Mais cette phase vient après la validation des templates officiels par des produits réels.",
