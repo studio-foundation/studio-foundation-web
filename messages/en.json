@@ -288,7 +288,7 @@
     "s4_layer3_body": "Applications built from templates. Can be open source or commercial. Can appear or disappear. Exercise no power over the kernel.",
     "s4_close": "As GitHub, GitLab, and Bitbucket are to git: products built on a free tool without authority over it.",
     "s5_title": "Technical architecture",
-    "s5_intro": "Studio is a monorepo of five packages, plus a template system.",
+    "s5_intro": "Studio is a monorepo of seven packages, plus a template system.",
     "s5_concepts": "Five concepts differentiate Studio from other orchestrators:",
     "s5_c1_title": "RALPH loop.",
     "s5_c1_body": "Execute, validate against the contract, retry with enriched feedback if fail, repeat until success or max attempts. This is what makes pipelines reliable. No stage advances until its output respects its contract.",
