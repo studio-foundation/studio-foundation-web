@@ -52,10 +52,10 @@ const PACKAGE_TREE = `@studio/cli          Terminal interface
 @studio/contracts    Shared types (zero deps)
 Templates/           Architectural patterns`;
 
-const TEMPLATE_INIT = `studio init --template analysis --name wiki-creator
+const TEMPLATE_INIT = `studio init --template document-analysis --name wiki-creator
 cd wiki-creator
 npm install
-studio run analysis/content-extraction --input "..."`;
+studio run document-analysis/analyzer --input "..."`;
 
 const COMMUNITY_REGISTRY = `studio init --template @user/legal-analysis --name my-tool`;
 
