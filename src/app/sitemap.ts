@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { NAV_HREFS, NAV_KEYS } from '@/lib/nav';
-
-const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
+import { SITE_URL } from '@/lib/site';
 
 // EN sans préfixe, FR avec /fr — cf. routing `localePrefix: 'as-needed'`
 const enUrl = (href: string) => (href === '/' ? SITE_URL : `${SITE_URL}${href}`);

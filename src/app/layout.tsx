@@ -3,6 +3,7 @@ import { Fraunces, Inter, JetBrains_Mono, Ubuntu } from 'next/font/google';
 import { getLocale } from 'next-intl/server';
 import '@arianeguay/design-system/styles';
 import './globals.css';
+import { SITE_URL } from '@/lib/site';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,8 +31,6 @@ const ubuntu = Ubuntu({
   variable: '--font-ubuntu',
   display: 'swap',
 });
-
-const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
 
 export const metadata: Metadata = {
   title: {

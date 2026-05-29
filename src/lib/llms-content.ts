@@ -1,8 +1,7 @@
 import { NAV_HREFS, NAV_KEYS, type NavKey } from './nav';
+import { SITE_URL } from './site';
 import en from '../../messages/en.json';
 import fr from '../../messages/fr.json';
-
-const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
 
 export type Locale = 'en' | 'fr';
 const MESSAGES = { en, fr } as const;

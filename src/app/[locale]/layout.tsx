@@ -5,8 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/system/Header';
 import Footer from '@/components/system/Footer';
-
-const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
+import { SITE_URL } from '@/lib/site';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;

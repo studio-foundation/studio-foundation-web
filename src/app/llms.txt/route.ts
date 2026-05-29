@@ -2,8 +2,7 @@ import { NAV_HREFS, NAV_KEYS, GITHUB_URL, type NavKey } from '@/lib/nav';
 import { localeUrl, mdUrl, type Locale } from '@/lib/llms-content';
 import en from '../../../messages/en.json';
 import fr from '../../../messages/fr.json';
-
-const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org';
+import { SITE_URL } from '@/lib/site';
 
 type Messages = typeof en;
 
