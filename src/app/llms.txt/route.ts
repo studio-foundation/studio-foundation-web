@@ -1,4 +1,5 @@
 import { NAV_HREFS, NAV_KEYS, GITHUB_URL, type NavKey } from '@/lib/nav';
+import { localeUrl, mdUrl, type Locale } from '@/lib/llms-content';
 import en from '../../../messages/en.json';
 import fr from '../../../messages/fr.json';
 
@@ -6,14 +7,9 @@ const SITE_URL = process.env.WEBSITE_SITE_URL ?? 'https://studio-foundation.org'
 
 type Messages = typeof en;
 
-const localeUrl = (locale: 'en' | 'fr', href: string) => {
-  const prefix = locale === 'fr' ? `${SITE_URL}/fr` : SITE_URL;
-  return href === '/' ? prefix : `${prefix}${href}`;
-};
-
 // Page label + one-line description, sourced from the same messages the
 // pages use for their <title>/<meta description> (cf. generateMetadata).
-function pageLine(messages: Messages, locale: 'en' | 'fr', key: NavKey): string {
+function pageLine(messages: Messages, locale: Locale, key: NavKey): string {
   const label = messages.nav[key];
   const ns = messages[key as keyof Messages] as Record<string, string> | undefined;
   const description =
@@ -23,12 +19,14 @@ function pageLine(messages: Messages, locale: 'en' | 'fr', key: NavKey): string 
   return `- [${label}](${localeUrl(locale, NAV_HREFS[key])}): ${description}`;
 }
 
-function buildSection(messages: Messages, locale: 'en' | 'fr', heading: string): string {
+function buildSection(messages: Messages, locale: Locale, heading: string): string {
   const lines = NAV_KEYS.map((key) => pageLine(messages, locale, key));
   return `## ${heading}\n\n${lines.join('\n')}`;
 }
 
 export function GET() {
+  const mdLinks = NAV_KEYS.map((key) => `- [${en.nav[key]} (Markdown)](${mdUrl('en', key)})`);
+
   const body = [
     '# studio:',
     '',
@@ -39,6 +37,11 @@ export function GET() {
     buildSection(en, 'en', 'Pages (English)'),
     '',
     buildSection(fr, 'fr', 'Pages (Français)'),
+    '',
+    '## Full text',
+    '',
+    `- [Full site content](${SITE_URL}/llms-full.txt)`,
+    ...mdLinks,
     '',
     '## Resources',
     '',
