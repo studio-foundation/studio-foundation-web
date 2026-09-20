@@ -12,7 +12,6 @@ export default function SectionArchitecture() {
     { name: t('ralph_name'), desc: t('ralph_desc') },
     { name: t('runner_name'), desc: t('runner_desc') },
     { name: t('engine_name'), desc: t('engine_desc') },
-    { name: t('api_name'), desc: t('api_desc') },
     { name: t('cli_name'), desc: t('cli_desc') },
   ];
 
