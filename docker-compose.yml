@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      secrets:
+        - github_token
+    mem_limit: 512m
+    # Loopback only: apollon's Cloudflare tunnel is the one way in.
+    ports:
+      - "127.0.0.1:3102:3000"
+    restart: unless-stopped
+    labels:
+      # Built here, pushed to no registry: freshness comes from a rebuild, never a pull.
+      com.centurylinklabs.watchtower.enable: "false"
+
+secrets:
+  github_token:
+    environment: GITHUB_TOKEN

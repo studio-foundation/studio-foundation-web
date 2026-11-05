@@ -24,6 +24,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   transpilePackages: ['@arianeguay/design-system'],
   images: {
     formats: ['image/avif', 'image/webp'],
