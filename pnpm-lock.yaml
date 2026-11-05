@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@arianeguay/design-system':
-        specifier: 0.2.2
-        version: 0.2.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: 0.3.1
+        version: 0.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -45,8 +45,8 @@ importers:
 
 packages:
 
-  '@arianeguay/design-system@0.2.2':
-    resolution: {integrity: sha512-yPCcRktlAqHe1DqZ/0rWBb6nBLLC2dUghiT4E66AkqiHjbvHI5FJQpuiJqmIHphlcZAHfsfhG5j088OuFrPg0w==, tarball: https://npm.pkg.github.com/download/@arianeguay/design-system/0.2.2/d6aa8d6b83d3983fb4fff691cca36bb98cff5d1a}
+  '@arianeguay/design-system@0.3.1':
+    resolution: {integrity: sha512-JPRyOD3jishPjcF1YebSDwM7/0WCwI8ko6i20RdtZYtWVcHTvpsr/W7o2sLjRcd7NMrAjC8wRaUGOvPo6KhEIA==, tarball: https://npm.pkg.github.com/download/@arianeguay/design-system/0.3.1/d1ac10b53c74131a8f334c3c937259edaeb7a926}
     peerDependencies:
       react: '>=19'
       react-dom: '>=19'
@@ -1169,6 +1169,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2005,7 +2006,7 @@ packages:
 
 snapshots:
 
-  '@arianeguay/design-system@0.2.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@arianeguay/design-system@0.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
