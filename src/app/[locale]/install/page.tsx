@@ -49,7 +49,7 @@ export default function InstallPage() {
         <WarmSection bg="cream" py={48}>
           <FadeIn>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24, maxWidth: 680 }}>
-              <InstallStep label={t('step1_label')} desc={t('step1_desc')} command="npm install -g @studio-foundation/cli@beta" />
+              <InstallStep label={t('step1_label')} desc={t('step1_desc')} command="curl -fsSL https://raw.githubusercontent.com/studio-foundation/studio/main/install.sh | sh" />
               <InstallStep label={t('step2_label')} desc={t('step2_desc')} command="studio init --template software-full --name my-builder" />
               <InstallStep label={t('step3_label')} desc={t('step3_desc')} command="studio config set provider anthropic --api-key $ANTHROPIC_API_KEY" />
               <InstallStep label={t('step4_label')} desc={t('step4_desc')} command={STEP4_CMD} />

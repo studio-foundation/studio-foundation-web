@@ -138,7 +138,7 @@
     "lead": "Install the CLI, create a project, wire a provider, run a pipeline.",
     "beta_banner": "Studio is in active beta. Expect bugs and breaking changes.",
     "step1_label": "Step 1 — Install the CLI",
-    "step1_desc": "Requires Node.js 18+. Installs the global `studio` command.",
+    "step1_desc": "Installs the standalone `studio` binary, with no Node.js needed. On Windows, use `install.ps1` from the same repository.",
     "step2_label": "Step 2 — Create a project",
     "step2_desc": "Scaffolds a project with the `software-full` template. The pipeline, contracts, agents and tools are ready to run.",
     "step3_label": "Step 3 — Configure a provider",
