@@ -15,7 +15,7 @@ Next.js 16.2.6 · React 19 · TypeScript 5 (strict) · next-intl 4.12 · @ariane
 | Design system | `@arianeguay/design-system` (publié sur GitHub Packages) |
 | Styling | CSS custom properties via DS + CSS Modules locaux si besoin |
 | Package manager | pnpm |
-| Runtime | Node.js, déployé sur Vercel |
+| Runtime | Node.js, en conteneur sur apollon (`docker-compose.yml`), servi par le tunnel Cloudflare |
 
 ---
 
