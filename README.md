@@ -8,7 +8,7 @@ The public website for [studio-foundation.org](https://studio-foundation.org).
 - **next-intl** — EN (default, `/`) and FR (`/fr/`)
 - **@arianeguay/design-system** — shared design system (tokens, components)
 - **pnpm** — package manager
-- **Vercel** — deployment target
+- **Docker** — runs as a container on a self-hosted server behind a Cloudflare tunnel (`docker-compose.yml`), rebuilt when `main` moves
 
 ## Working locally
 
